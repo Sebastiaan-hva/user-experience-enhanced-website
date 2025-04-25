@@ -79,6 +79,9 @@ if ('fetch' in window && 'DOMParser' in window) {
     // Let op: hiermee overschrijven we de default Loading state van de browser...
     event.preventDefault()
 
+    let succesState =  document.querySelector('#logo-secondary');
+    succesState.classList.remove("succes")
+
     let loadingState = document.querySelector('#grid-save');
     loadingState.classList.add("loading");
 
@@ -111,7 +114,7 @@ if ('fetch' in window && 'DOMParser' in window) {
     form.outerHTML = newState.outerHTML
 
     
-    let succesState =  document.querySelector('#logo-secondary');
+    
     succesState.classList.add("succes");
     // succesState.classList.remove("succes");
   })
